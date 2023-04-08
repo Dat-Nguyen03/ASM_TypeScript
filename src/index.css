@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700&display=swap");
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .break-word {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+  }
+  .loading {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #d70018;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+  }
+  .animation {
+    animation: rotate 2s infinite ease;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
